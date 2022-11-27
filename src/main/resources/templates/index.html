@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add number</title>
+
+    <!--css-->
+    <link th:href="@{/css/bootstrap.css}"rel="stylesheet"/>
+
+    <!--js-->
+    <script th:src="@{/js/bootstrap.js}"></script>
+</head>
+<body>
+    <div>
+    <h1 style="text-align: center">Welcome to my Currency Converter Tool</h1>
+    </div>
+    <div style="padding: 0px 100px 0px 100px">
+        <form th:action="@{/convert}" th:object="${moneyConverter}" method="post">
+            <div>
+                <label>USD: </label>
+                <input type="text" id="num1" name="num1" class="form-control"/>
+            </div>
+            <div>
+                <label>Exchange rate: </label>
+                <input type="text" id="num2" name="num2" class="form-control"/>
+            </div><br/>
+            <div>
+                <button type="submit" class="btn btn-primary">Convert</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
